@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nicole (Yitong) Liu</title>
-  <meta name="description" content="Nicole (Yitong) Liu — PhD Sociology & MS Data Science at Brown University." />
+  <title>Yitong Liu</title>
+  <meta name="description" content="Yitong Liu — PhD candidate in Sociology at Brown University with concurrent master’s training in Data Science." />
 
   <style>
     :root{
-      --bg: #ffffff;          /* background -> white */
-      --fg: #111827;          /* near-slate */
-      --muted: #4b5563;       /* gray */
-      --rule: #e5e7eb;        /* light border */
-      --accent: #0f766e;      /* teal-ish accent (subtle) */
-      --link: #0b57d0;
+      --bg: #ffffff;
+      --fg: #111827;
+      --muted: #4b5563;
+      --rule: #e5e7eb;        /* light gray line */
+      --accent: #0f766e;
       --max: 1120px;
     }
 
@@ -25,8 +24,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       line-height: 1.65;
     }
-    a{ color: var(--link); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+    a{ color: #111827; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover{ text-decoration-thickness: 2px; }
 
     .wrap{
       max-width: var(--max);
@@ -34,7 +33,6 @@
       padding: 34px 18px 80px;
     }
 
-    /* layout similar to the screenshot: left card + right content */
     .top{
       display: grid;
       grid-template-columns: 360px 1fr;
@@ -42,16 +40,14 @@
       align-items: start;
     }
     @media (max-width: 980px){
-      .top{
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
+      .top{ grid-template-columns: 1fr; gap: 22px; }
     }
 
     /* LEFT column */
     .left{
       position: sticky;
       top: 22px;
+      text-align: center;  /* (3) center align the three lines */
     }
     @media (max-width: 980px){
       .left{ position: static; }
@@ -63,222 +59,9 @@
       margin-bottom: 18px;
     }
 
-    /* square with rounded edges */
     .photo{
       width: 240px;
       height: 240px;
       object-fit: cover;
-      border-radius: 22px;  /* rounded edges */
-      border: 1px solid var(--rule);
-      background: #fff;
-    }
-
-    .name{
-      font-size: 54px;
-      line-height: 1.05;
-      margin: 10px 0 0;
-      letter-spacing: -0.03em;
-      font-weight: 800;
-    }
-
-    .role{
-      margin: 10px 0 0;
-      font-size: 26px;
-      font-weight: 750;
-      color: var(--accent);
-    }
-
-    .affil{
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    /* icon buttons row */
-    .icons{
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 22px;
-    }
-    .icon-btn{
-      width: 46px;
-      height: 46px;
-      border-radius: 999px;
-      border: 1px solid var(--rule);
-      background: #ffffff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 22px rgba(0,0,0,.06);
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .icon-btn:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(0,0,0,.10);
-      text-decoration: none;
-    }
-    .icon-btn svg{
-      width: 20px;
-      height: 20px;
-      fill: #111827;
-    }
-
-    /* RIGHT column typography */
-    .right{
-      font-size: 18px;
-    }
-    .right p{
-      margin: 0 0 18px;
-      color: #111827;
-    }
-    .right .muted{
-      color: var(--muted);
-    }
-    .right a{
-      color: #111827;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-    .right a:hover{
-      color: #111827;
-      text-decoration-thickness: 2px;
-    }
-
-    .rule{
-      border: 0;
-      height: 1px;
-      background: var(--rule);
-      margin: 22px 0;
-    }
-
-    /* section headings minimal */
-    h2{
-      margin: 22px 0 10px;
-      font-size: 16px;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 750;
-    }
-
-    .item{
-      margin: 0 0 14px;
-    }
-    .item b{
-      font-weight: 750;
-    }
-    .meta{
-      color: var(--muted);
-    }
-
-    /* optional inline CV embed */
-    .cvframe{
-      width: 100%;
-      height: 980px;
-      border: 1px solid var(--rule);
-      border-radius: 16px;
-      background: #fff;
-      margin-top: 12px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <div class="top">
-      <!-- LEFT -->
-      <aside class="left">
-        <div class="photo-wrap">
-          <img class="photo" src="assets/Profile_photo.jpg" alt="Nicole (Yitong) Liu" />
-        </div>
-
-        <div class="name">Nicole Liu</div>
-        <div class="role">PhD Student</div>
-        <div class="affil">Brown University</div>
-
-        <div class="icons" aria-label="contact links">
-          <!-- Email button -->
-          <a class="icon-btn" href="mailto:yitong_liu@brown.edu" aria-label="Email">
-            <!-- envelope icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-          </a>
-
-          <!-- GitHub button -->
-          <a class="icon-btn" href="https://github.com/nicoleliuu" target="_blank" rel="noopener" aria-label="GitHub">
-            <!-- github mark -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 .5C5.73.5.75 5.64.75 12.02c0 5.1 3.29 9.43 7.86 10.96.57.11.78-.25.78-.56
-              0-.28-.01-1.02-.02-2-3.2.71-3.87-1.58-3.87-1.58-.52-1.35-1.28-1.71-1.28-1.71-1.04-.73.08-.72.08-.72
-              1.15.08 1.75 1.2 1.75 1.2 1.02 1.79 2.68 1.27 3.33.97.1-.75.4-1.27.72-1.56-2.55-.3-5.23-1.3-5.23-5.8
-              0-1.28.45-2.33 1.19-3.15-.12-.3-.52-1.52.11-3.17 0 0 .97-.32 3.18 1.2.92-.26 1.9-.39 2.88-.39
-              .98 0 1.96.13 2.88.39 2.2-1.52 3.17-1.2 3.17-1.2.63 1.65.23 2.87.11 3.17.74.82 1.19 1.87 1.19 3.15
-              0 4.51-2.69 5.5-5.25 5.79.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.68.79.56
-              4.56-1.53 7.85-5.86 7.85-10.96C23.25 5.64 18.27.5 12 .5z"/>
-            </svg>
-          </a>
-        </div>
-      </aside>
-
-      <!-- RIGHT -->
-      <main class="right">
-        <p>
-          I am a Ph.D. student in Sociology and an M.S. student in Data Science at Brown University (GPA 4.0/4.0). My work
-          sits at the intersection of computational social science and machine learning, with projects on (1) how data
-          production shapes algorithmic bias, (2) measuring LLM reasoning using large-scale social survey data, and (3)
-          large-scale text analysis of climate discourse.
-        </p>
-
-        <p class="muted">
-          I previously worked as a Data Scientist Intern at Supio (LLM-based narrative generation pipelines; interactive
-          Streamlit dashboard) and a Research Intern at Lifespan (3D medical imaging, 3D U-Net / TransNet).
-          <br />
-          <b>CV:</b> <a href="assets/Yitong_Liu_CV.pdf" target="_blank" rel="noopener">Download PDF</a>
-        </p>
-
-        <hr class="rule" />
-
-        <h2>Research</h2>
-        <div class="item">
-          <b>Understanding AI Bias via Experimental and Computational Methods</b>
-          <div class="meta">Dissertation project (Oct 2025 – Ongoing)</div>
-        </div>
-        <div class="item">
-          <b>Measuring LLM Reasoning Using Large-Scale Social Survey Data</b>
-          <div class="meta">Project (Dec 2024 – Ongoing)</div>
-        </div>
-        <div class="item">
-          <b>Computational Text Analysis of Climate Change Discourse on Twitter</b>
-          <div class="meta">Project (Jun 2023 – Jan 2024)</div>
-        </div>
-
-        <h2>Education</h2>
-        <div class="item">
-          <b>Brown University</b> — Ph.D. Sociology; M.S. Data Science
-          <div class="meta">Aug 2022 – Exp. May 2027</div>
-        </div>
-        <div class="item">
-          <b>Boston College</b> — B.A. Sociology (Honors)
-          <div class="meta">Aug 2018 – Dec 2021</div>
-        </div>
-
-        <h2>Selected Awards</h2>
-        <div class="item"><b>Open Graduate Education Fellowship</b> <span class="meta">(Brown University)</span></div>
-        <div class="item"><b>Watson Institute Pre-dissertation Award</b> <span class="meta">($5,000)</span></div>
-        <div class="item"><b>PSTC Summer Award</b> <span class="meta">($1,500)</span></div>
-
-        <hr class="rule" />
-
-        <h2 id="cv">CV</h2>
-        <div class="meta">
-          View inline below or <a href="assets/Yitong_Liu_CV.pdf" target="_blank" rel="noopener">open the PDF</a>.
-        </div>
-        <iframe class="cvframe" src="assets/Yitong_Liu_CV.pdf" title="Nicole (Yitong) Liu CV (PDF)"></iframe>
-      </main>
-    </div>
-  </div>
-</body>
-</html>
+      border-radius: 22px;         /* square with rounded edges */
+      border: 1
