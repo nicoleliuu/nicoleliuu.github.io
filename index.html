@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yitong Liu</title>
+  <meta name="description" content="Yitong Liu — PhD Sociology & MS Data Science at Brown University. Research on AI bias, LLM reasoning, and computational text analysis." />
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #555;
+      --border: #e8e8e8;
+      --card: #fafafa;
+      --link: #0b57d0;
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0c0f14; --fg:#f2f4f8; --muted:#b7c0cc; --border:#1f2633; --card:#101621; --link:#7ab0ff;
+        --shadow: 0 8px 24px rgba(0,0,0,.35);
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height:1.55;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width: 980px; margin: 0 auto; padding: 28px 18px 64px;}
+    header{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;
+      padding: 18px 0 10px;
+    }
+    .name{font-size: 34px; font-weight: 750; letter-spacing:-.02em; margin:0}
+    .sub{margin: 8px 0 0; color: var(--muted); max-width: 70ch}
+    .pillbar{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .pill{
+      border:1px solid var(--border);
+      background: var(--card);
+      padding: 8px 12px;
+      border-radius: 999px;
+      box-shadow: none;
+      font-size: 14px;
+    }
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap;
+      padding: 12px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    nav a{color: var(--muted); font-size: 14px}
+    nav a:hover{color: var(--fg)}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .grid{grid-template-columns: 1.15fr .85fr;}
+    }
+    .card{
+      border:1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px 16px;
+      box-shadow: var(--shadow);
+    }
+    h2{
+      font-size: 18px;
+      margin: 0 0 10px;
+      letter-spacing:-.01em;
+    }
+    .section{margin-top: 18px}
+    .item{padding: 10px 0; border-top: 1px solid var(--border)}
+    .item:first-of-type{border-top:none; padding-top:0}
+    .row{
+      display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      align-items:baseline;
+    }
+    .title{font-weight:700}
+    .meta{color: var(--muted); font-size: 14px}
+    ul{margin: 8px 0 0 18px; padding:0}
+    li{margin: 6px 0}
+    .footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .cvframe{
+      width:100%;
+      height: 980px;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1 class="name">Yitong Liu</h1>
+        <p class="sub">
+          Ph.D. in Sociology &amp; M.S. in Data Science (Brown University). Research on AI bias, LLM reasoning,
+          and computational text analysis.
+        </p>
+
+        <div class="pillbar">
+          <span class="pill">Providence, RI</span>
+          <a class="pill" href="mailto:yitong_liu@brown.edu">yitong_liu@brown.edu</a>
+          <a class="pill" href="assets/Yitong_Liu_CV.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+          <a class="pill" href="assets/Yitong_Liu_CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#cv">CV</a>
+    </nav>
+
+    <div class="grid">
+      <!-- LEFT COLUMN -->
+      <div class="card section" id="research">
+        <h2>PhD Research Projects</h2>
+
+        <div class="item">
+          <div class="row">
+            <div class="title">Understanding AI Bias via Experimental and Computational Methods</div>
+            <div class="meta">Oct 2025 – Ongoing</div>
+          </div>
+          <ul>
+            <li>Dissertation project on how data production processes shape downstream algorithmic bias.</li>
+            <li>Chapter One: online experiment assigning image batches with varying racial, gender, and religious compositions to annotators to identify relationships between worker demographics and data bias.</li>
+            <li>Chapter Two: formalizes annotator judgments as preference/reward signals in reinforcement learning pipelines for vision models to trace bias propagation through optimization.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <div class="title">Measuring LLM Reasoning Using Large-Scale Social Survey Data</div>
+            <div class="meta">Dec 2024 – Ongoing</div>
+          </div>
+          <ul>
+            <li>Generates and analyzes reasoning traces from mainstream LLMs (e.g., ChatGPT API, Gemini API).</li>
+            <li>Uses embedding-based analyses (e.g., TF–IDF features and embedding centroids) to characterize reasoning patterns and directional bias.</li>
+            <li>Manuscript in preparation for submission.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <div class="title">Computational Text Analysis of Climate Change Discourse on Twitter</div>
+            <div class="meta">Jun 2023 – Jan 2024</div>
+          </div>
+          <ul>
+            <li>Advanced from research assistant to first author; analyzed 1.2M+ tweets using scraping, cleaning, topic modeling, and sentiment analysis to study debates over science and expertise.</li>
+            <li>Leveraged platform structures (replies/retweets) to characterize engagement dynamics.</li>
+            <li>Manuscript submitted and under review.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <div class="card section" id="education">
+          <h2>Education</h2>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">Brown University</div>
+              <div class="meta">Aug 2022 – Exp. May 2027</div>
+            </div>
+            <div class="meta">Ph.D. in Sociology (GPA 4.0/4.0)</div>
+            <div class="meta">M.S. in Data Science (GPA 4.0/4.0) — Open Graduate Education Fellowship (funded)</div>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">Boston College</div>
+              <div class="meta">Aug 2018 – Dec 2021</div>
+            </div>
+            <div class="meta">B.A. in Sociology (Honors) — GPA 3.8/4.0</div>
+          </div>
+        </div>
+
+        <div class="card section" id="experience">
+          <h2>Work Experience</h2>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">Data Scientist Intern, Supio</div>
+              <div class="meta">Jun 2025 – Aug 2025</div>
+            </div>
+            <ul>
+              <li>Designed an LLM-based narrative generation &amp; analysis pipeline using entity extraction and multi-agent reasoning for relationship mapping in medical case data.</li>
+              <li>Built an interactive Streamlit dashboard to visualize product quality with real-time metrics and custom filters for operations teams.</li>
+              <li>Validated end-to-end pipelines in Python &amp; SQL, including AWS-based loading and AI + human evaluation.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">Research Intern, Lifespan</div>
+              <div class="meta">Jan 2025 – Apr 2025</div>
+            </div>
+            <ul>
+              <li>Developed deep learning pipelines for MRI-based glioblastoma prognosis and analysis.</li>
+              <li>Implemented and fine-tuned 3D U-Net and 3D TransNet for multi-modal brain tumor segmentation across full volumes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card section" id="awards">
+          <h2>Selected Fellowships &amp; Awards</h2>
+
+          <div class="item">
+            <div class="title">Open Graduate Education Fellowship (Brown University)</div>
+            <div class="meta">Supports pursuing the M.S. alongside the Ph.D.</div>
+          </div>
+
+          <div class="item">
+            <div class="title">Watson Institute Pre-dissertation Award</div>
+            <div class="meta">$5,000 (maximum)</div>
+          </div>
+
+          <div class="item">
+            <div class="title">Population Studies and Training Center Summer Award</div>
+            <div class="meta">$1,500</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section" id="cv" style="margin-top:18px;">
+      <h2>CV</h2>
+      <p class="meta" style="margin-top:0;">
+        View inline below, or <a href="assets/Yitong_Liu_CV.pdf" target="_blank" rel="noopener">open the PDF</a>.
+      </p>
+      <iframe class="cvframe" src="assets/Yitong_Liu_CV.pdf" title="Yitong Liu CV (PDF)"></iframe>
+    </div>
+
+    <div class="footer">
+      <div>Last updated: <span id="lastUpdated"></span></div>
+    </div>
+  </div>
+
+  <script>
+    // Optional: show a friendly "last updated" date
+    document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
