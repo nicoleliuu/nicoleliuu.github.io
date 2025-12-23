@@ -39,3 +39,280 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    .nav a{ color: var(--muted); }
+    .nav a:hover{ color: var(--fg); }
+
+    .card{
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    /* header block */
+    .hero{
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 720px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .photo{
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,.10);
+      background: #fff;
+    }
+
+    h1{
+      margin: 0;
+      font-size: 40px;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .title{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .links{
+      margin-top: 10px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 14px;
+    }
+    .pill{
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.12);
+      background: #fff;
+    }
+
+    hr{
+      border: 0;
+      height: 1px;
+      background: var(--rule);
+      margin: 18px 0;
+    }
+
+    h2{
+      font-size: 18px;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .section{
+      margin-top: 18px;
+    }
+    .item{
+      padding-top: 12px;
+      margin-top: 12px;
+      border-top: 1px solid var(--rule);
+    }
+    .item:first-child{
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .row{
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    .row b{ font-weight: 700; }
+    .meta{ color: var(--muted); font-size: 14px; }
+
+    ul{ margin: 8px 0 0 18px; padding: 0; }
+    li{ margin: 6px 0; }
+
+    .cvframe{
+      width: 100%;
+      height: 980px;
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    footer{
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div id="home" class="card">
+      <div class="hero">
+        <img class="photo" src="Profile_photo.jpg" alt="Nicole (Yitong) Liu" />
+
+        <div>
+          <h1>Nicole (Yitong) Liu</h1>
+          <div class="title">
+            Ph.D. Student in Sociology · M.S. Student in Data Science<br />
+            Brown University · Providence, RI
+          </div>
+
+          <div class="links">
+            <a class="pill" href="mailto:yitong_liu@brown.edu">yitong_liu@brown.edu</a>
+            <a class="pill" href="assets/Yitong_Liu_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <span class="meta">617-519-0953</span>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <p style="margin:0; color: var(--fg);">
+        I am a Ph.D. student in Sociology and an M.S. student in Data Science at Brown University (GPA 4.0/4.0). :contentReference[oaicite:3]{index=3}
+        My research combines computational social science, experiments, and machine learning to study data production,
+        AI systems, and public discourse—spanning experimental work on annotation bias, measurement of LLM reasoning
+        using social surveys, and large-scale text analysis of climate discourse.
+      </p>
+    </div>
+
+    <div id="research" class="card section">
+      <h2>Research</h2>
+
+      <div class="item">
+        <div class="row">
+          <b>Understanding AI Bias via Experimental and Computational Methods</b>
+          <span class="meta">Oct 2025 – Ongoing</span>
+        </div>
+        <ul>
+          <li>Dissertation project on how data production processes shape downstream algorithmic bias. :contentReference[oaicite:4]{index=4}</li>
+          <li>Online experiment varying racial, gender, and religious composition of image batches assigned to annotators. :contentReference[oaicite:5]{index=5}</li>
+          <li>Uses outputs to formalize preference/reward signals in RL pipelines for vision models and trace bias propagation. :contentReference[oaicite:6]{index=6}</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <b>Measuring LLM Reasoning Using Large-Scale Social Survey Data</b>
+          <span class="meta">Dec 2024 – Ongoing</span>
+        </div>
+        <ul>
+          <li>Generates and analyzes reasoning traces from mainstream LLMs (e.g., ChatGPT API, Gemini API). :contentReference[oaicite:7]{index=7}</li>
+          <li>Embedding-based analyses using TF–IDF features and embedding centroids to characterize reasoning patterns and directional bias. :contentReference[oaicite:8]{index=8}</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <b>Computational Text Analysis of Climate Change Discourse on Twitter</b>
+          <span class="meta">Jun 2023 – Jan 2024</span>
+        </div>
+        <ul>
+          <li>Analyzed 1.2M+ tweets with scraping, cleaning, topic modeling, and sentiment analysis. :contentReference[oaicite:9]{index=9}</li>
+          <li>Used replies/retweets to characterize engagement dynamics. :contentReference[oaicite:10]{index=10}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="education" class="card section">
+      <h2>Education</h2>
+
+      <div class="item">
+        <div class="row">
+          <b>Brown University</b>
+          <span class="meta">Aug 2022 – Exp. May 2027</span>
+        </div>
+        <div class="meta">Ph.D. in Sociology (GPA 4.0/4.0) · M.S. in Data Science (GPA 4.0/4.0) :contentReference[oaicite:11]{index=11}</div>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <b>Boston College</b>
+          <span class="meta">Aug 2018 – Dec 2021</span>
+        </div>
+        <div class="meta">B.A. in Sociology (Honors) (GPA 3.8/4.0) :contentReference[oaicite:12]{index=12}</div>
+      </div>
+    </div>
+
+    <div id="experience" class="card section">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <div class="row">
+          <b>Data Scientist Intern, Supio</b>
+          <span class="meta">Jun 2025 – Aug 2025</span>
+        </div>
+        <ul>
+          <li>LLM-based narrative generation + analysis pipeline using entity extraction and multi-agent reasoning. :contentReference[oaicite:13]{index=13}</li>
+          <li>Built an interactive Streamlit dashboard with real-time metrics and custom filters. :contentReference[oaicite:14]{index=14}</li>
+          <li>Validated pipelines in Python/SQL with AWS-based loading and AI + human evaluation. :contentReference[oaicite:15]{index=15}</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <b>Research Intern, Lifespan</b>
+          <span class="meta">Jan 2025 – Apr 2025</span>
+        </div>
+        <ul>
+          <li>3D computer vision for medical imaging; MRI-based glioblastoma prognosis and analysis. :contentReference[oaicite:16]{index=16}</li>
+          <li>Implemented and fine-tuned 3D U-Net and 3D TransNet for multi-modal segmentation. :contentReference[oaicite:17]{index=17}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="awards" class="card section">
+      <h2>Selected Fellowships &amp; Awards</h2>
+
+      <div class="item">
+        <b>Open Graduate Education Fellowship (Brown University)</b>
+        <div class="meta">Supports pursuing a secondary master’s alongside the Ph.D. :contentReference[oaicite:18]{index=18}</div>
+      </div>
+
+      <div class="item">
+        <b>Watson Institute Pre-dissertation Award</b>
+        <div class="meta">Amount received: $5,000 (maximum). :contentReference[oaicite:19]{index=19}</div>
+      </div>
+
+      <div class="item">
+        <b>Population Studies and Training Center Summer Award</b>
+        <div class="meta">Amount received: $1,500. :contentReference[oaicite:20]{index=20}</div>
+      </div>
+    </div>
+
+    <div id="cv" class="card section">
+      <h2>CV</h2>
+      <p class="meta" style="margin-top:0;">
+        Open in a new tab: <a href="assets/Yitong_Liu_CV.pdf" target="_blank" rel="noopener">assets/Yitong_Liu_CV.pdf</a>
+      </p>
+      <iframe class="cvframe" src="assets/Yitong_Liu_CV.pdf" title="Nicole (Yitong) Liu CV (PDF)"></iframe>
+    </div>
+
+    <footer id="contact">
+      <div><b>Contact</b></div>
+      <div>Nicole (Yitong) Liu · Providence, RI · <a href="mailto:yitong_liu@brown.edu">yitong_liu@brown.edu</a></div>
+    </footer>
+  </div>
+</body>
+</html>
